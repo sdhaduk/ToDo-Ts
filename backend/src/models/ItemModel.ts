@@ -11,3 +11,4 @@ export const createItem = (values: Record<string, any>) => new Item(values)
     .save().then((user) => user.toObject());
 export const deleteItem = (id: string) => Item.findOneAndDelete({_id: id});
 export const updateItem = (id: string, values: Record<string, any>) => Item.findByIdAndUpdate(id, values)
+export const getItemById = (id: string) => Item.findById(id);
