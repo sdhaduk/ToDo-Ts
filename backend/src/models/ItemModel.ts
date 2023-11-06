@@ -5,10 +5,7 @@ const ItemSchema = new mongoose.Schema ({
     description: {type: String, required: true}
 });
 
-export const ItemModel = mongoose.model('Item', ItemSchema);
-
-
-
-
+export const Item = mongoose.model('Item', ItemSchema);
+export const getItems = () => Item.find({});
 
 
