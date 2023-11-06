@@ -19,12 +19,9 @@ mongoose
         console.log(error);
     });
 
-
-
-
-
-    
-
+app.get('/', (req, res) => {
+    res.status(200).send({message: "hi"})
+});
 
 
 
