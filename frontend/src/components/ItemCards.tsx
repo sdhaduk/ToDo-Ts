@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemType } from "../Types/types";
+import { ItemType } from "../types/types";
 import SingleItemCard from "./SingleItemCard";
 
 interface Props {

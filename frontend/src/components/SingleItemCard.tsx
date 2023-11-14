@@ -4,28 +4,30 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { ItemType } from "../Types/types";
+import { ItemType } from "../types/types";
 
 interface Props {
-  item: ItemType
+  item: ItemType;
 }
 
-const SingleItemCard: React.FC<Props> = ({item}:Props) => {
+const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
   return (
-    <Card sx={{ minWidth: 275, display:'inline-block', margin: 1}}>
+    <Card sx={{ minWidth: 275, display: "inline-block", margin: 1 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {item._id}
         </Typography>
         <Typography variant="h5" component="div">
-        {item.title}
+          {item.title}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        {item.description}
+          {item.description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="error">Delete</Button>
+        <Button size="small" color="error">
+          Delete
+        </Button>
       </CardActions>
     </Card>
   );

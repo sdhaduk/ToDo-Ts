@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import SingleItemCard from "../components/SingleItemCard";
-import { ItemType } from "../Types/types";
+import { ItemType } from "../types/types";
 import Loading from "../components/Loading";
 import ItemCards from "../components/ItemCards";
 
