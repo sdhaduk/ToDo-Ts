@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Home from "./pages/Home";
 
-function App() {
+const App: React.FC = ()  => {
   return (
     <div>
       <Home />
