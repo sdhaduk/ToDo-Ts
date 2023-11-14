@@ -1,6 +1,7 @@
 import React from "react";
 import { ItemType } from "../types/types";
 import SingleItemCard from "./SingleItemCard";
+import { Grid } from "@mui/material";
 
 interface Props {
   items: ItemType[];
@@ -8,11 +9,13 @@ interface Props {
 
 const ItemCards: React.FC<Props> = ({ items }: Props) => {
   return (
-    <div>
+    <Grid container spacing={1} sx={{justifyContent: "center"}}>
       {items.map((item) => (
-        <SingleItemCard key={item._id} item={item} />
+        <Grid item >
+          <SingleItemCard key={item._id} item={item} />
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 };
 

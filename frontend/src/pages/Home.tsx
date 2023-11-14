@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import axios, { AxiosResponse } from "axios";
-import SingleItemCard from "../components/SingleItemCard";
 import { ItemType } from "../types/types";
 import Loading from "../components/Loading";
 import ItemCards from "../components/ItemCards";
+import { Grid, Typography } from "@mui/material";
 
 const Home: React.FC = () => {
   const [items, setItems] = useState<ItemType[]>([]);
@@ -24,7 +24,16 @@ const Home: React.FC = () => {
       });
   }, []);
 
-  return <div>{loading ? <Loading /> : <ItemCards items={items} />}</div>;
+  return (
+    <Grid container sx={{justifyContent: "center"}}>
+      <Grid item sx={{mb: 2}}>
+        <Typography variant="h2" >
+          To Do List
+        </Typography>
+      </Grid>
+    {loading ? <Loading /> : <ItemCards items={items} />}
+    </Grid>
+  );
 };
 
 export default Home;

@@ -12,7 +12,7 @@ interface Props {
 
 const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
   return (
-    <Card sx={{ minWidth: 275, display: "inline-block", margin: 1 }}>
+    <Card sx={{ minWidth: 275, display: "inline-block"}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {item._id}
