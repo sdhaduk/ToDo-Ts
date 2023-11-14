@@ -4,7 +4,7 @@ import axios, { AxiosResponse } from "axios";
 import { ItemType } from "../types/types";
 import Loading from "../components/Loading";
 import ItemCards from "../components/ItemCards";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Button } from "@mui/material";
 
 const Home: React.FC = () => {
   const [items, setItems] = useState<ItemType[]>([]);
@@ -25,13 +25,15 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <Grid container sx={{justifyContent: "center"}}>
-      <Grid item sx={{mb: 2}}>
-        <Typography variant="h2" >
-          To Do List
-        </Typography>
+    <Grid container sx={{ justifyContent: "center" }} spacing={2}>
+      <Grid item sx={{ margin: 2 }}>
+        <Typography variant="h2">To-Do List</Typography>
       </Grid>
-    {loading ? <Loading /> : <ItemCards items={items} />}
+      {loading ? <Loading /> : <ItemCards items={items} />}
+
+      <Grid item>
+        <Button variant="outlined">Create New Task</Button>
+      </Grid>
     </Grid>
   );
 };

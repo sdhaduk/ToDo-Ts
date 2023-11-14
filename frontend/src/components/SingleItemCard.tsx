@@ -25,7 +25,7 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="error">
+        <Button size="small" color="error" variant="outlined">
           Delete
         </Button>
       </CardActions>
