@@ -14,9 +14,6 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
   return (
     <Card sx={{ minWidth: 275, display: "inline-block"}}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {item._id}
-        </Typography>
         <Typography variant="h5" component="div">
           {item.title}
         </Typography>
@@ -25,6 +22,12 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
         </Typography>
       </CardContent>
       <CardActions>
+      <Button size="small" color="primary" variant="outlined">
+          View
+        </Button>
+        <Button size="small" color="success" variant="outlined">
+          Update
+        </Button>
         <Button size="small" color="error" variant="outlined">
           Delete
         </Button>
