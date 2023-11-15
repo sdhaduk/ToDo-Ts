@@ -11,7 +11,7 @@ const ItemCards: React.FC<Props> = ({ items }: Props) => {
   return (
     <Grid container spacing={1} sx={{justifyContent: "center"}}>
       {items.map((item) => (
-        <Grid item >
+        <Grid item>
           <SingleItemCard key={item._id} item={item} />
         </Grid>
       ))}

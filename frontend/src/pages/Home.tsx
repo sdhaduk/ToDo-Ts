@@ -25,6 +25,20 @@ const Home: React.FC = () => {
       });
   }, []);
 
+  const getData = () => {
+    setLoading(true);
+    axios
+      .get("http://localhost:3000/items/get-items")
+      .then((response: AxiosResponse) => {
+        setItems(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setLoading(false);
+      });
+  }
+
   return (
     <Grid container sx={{ justifyContent: "center" }} spacing={2}>
       <Grid item sx={{ margin: 2 }}>
@@ -33,7 +47,7 @@ const Home: React.FC = () => {
       {loading ? <Loading /> : <ItemCards items={items} />}
 
       <Grid item sx={{ mt: 5 }}>
-        <CreateTaskForm />
+        <CreateTaskForm getData={getData}/>
       </Grid>
     </Grid>
   );
