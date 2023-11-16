@@ -28,7 +28,7 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
       <Button size="small" color="primary" variant="outlined">
           View
         </Button>
-        <Button size="small" color="success" variant="outlined">
+        <Button size="small" color="success" variant="outlined" to={`/update/${id}`} component={Link}>
           Update
         </Button>
         <Button size="small" color="error" variant="outlined" to={`/delete/${id}`} component={Link}>

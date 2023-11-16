@@ -27,7 +27,7 @@ const DeletePage: React.FC = () => {
           <Button color="error" size="large" variant="outlined" sx={{ mt: 1 }} onClick={deleteItem}>
             Delete
           </Button>
-
+    
           <Button
             color="primary"
             size="large"

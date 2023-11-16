@@ -4,6 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import DeletePage from "./pages/DeletePage";
+import UpdatePage from "./pages/UpdatePage";
 
 
 const App: React.FC = ()  => {
@@ -19,6 +20,7 @@ const App: React.FC = ()  => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/delete/:id" element ={<DeletePage />} />
+      <Route path="/update/:id" element={<UpdatePage />} />
     </Routes>
     </ThemeProvider>
   );
