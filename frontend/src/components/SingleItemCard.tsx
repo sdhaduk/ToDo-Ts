@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { ItemType } from "../types/types";
 import { Link } from "react-router-dom";
+import { ButtonGroup } from "@mui/material";
 
 interface Props {
   item: ItemType;
@@ -25,6 +26,7 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
         </Typography>
       </CardContent>
       <CardActions>
+        <ButtonGroup>
       <Button size="small" color="primary" variant="outlined">
           View
         </Button>
@@ -34,6 +36,7 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
         <Button size="small" color="error" variant="outlined" to={`/delete/${id}`} component={Link}>
           Delete
         </Button>
+        </ButtonGroup>
       </CardActions>
     </Card>
   );
