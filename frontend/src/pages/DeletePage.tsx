@@ -24,10 +24,16 @@ const DeletePage: React.FC = () => {
       <Grid item sx={{ mt: 1 }}>
         <Typography variant="h2">Confirm</Typography>
         <ButtonGroup sx={{ ml: 1 }}>
-          <Button color="error" size="large" variant="outlined" sx={{ mt: 1 }} onClick={deleteItem}>
+          <Button
+            color="error"
+            size="large"
+            variant="outlined"
+            sx={{ mt: 1 }}
+            onClick={deleteItem}
+          >
             Delete
           </Button>
-    
+
           <Button
             color="primary"
             size="large"

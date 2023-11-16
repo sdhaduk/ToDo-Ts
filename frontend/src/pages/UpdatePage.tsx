@@ -16,21 +16,20 @@ const UpdatePage: React.FC = () => {
   const [description, setDescription] = useState<string | null>(null);
   const navigate = useNavigate();
 
-
   const updateItem = () => {
     const data = {
-        title,
-        description
+      title,
+      description,
     };
 
     axios
-    .put(`http://localhost:3000/items/update-item/${id}`, data)
-    .then(() => {
-        navigate("/")   
-    })
-    .catch((error) => {
-        console.log(error)
-    });
+      .put(`http://localhost:3000/items/update-item/${id}`, data)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

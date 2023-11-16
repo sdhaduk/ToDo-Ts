@@ -6,35 +6,32 @@ interface Props {
   getData: () => void;
 }
 
-const CreateTaskForm: React.FC<Props> = ({getData} : Props) => {
-
-  const [title, setTitle] = useState<string | null>(null)
-  const [description, setDescription] = useState<string | null>(null)
+const CreateTaskForm: React.FC<Props> = ({ getData }: Props) => {
+  const [title, setTitle] = useState<string | null>(null);
+  const [description, setDescription] = useState<string | null>(null);
 
   const saveItem = () => {
     const data = {
       title,
-      description
+      description,
     };
 
     axios
-    .post("http://localhost:3000/items/create-item", data)
-    .then(() => {
-      getData();
-    })
-    .catch((error) => {
-      console.log(error)
-    });
+      .post("http://localhost:3000/items/create-item", data)
+      .then(() => {
+        getData();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
-
 
   return (
     <Grid container>
       <FormControl>
         <Grid item>
           <TextField
-            onChange={(e) => setTitle(e.target.value)} 
+            onChange={(e) => setTitle(e.target.value)}
             id="title"
             variant="outlined"
             label="Title"

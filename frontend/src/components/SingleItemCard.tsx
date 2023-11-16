@@ -13,10 +13,10 @@ interface Props {
 }
 
 const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
-  const id = item._id
+  const id = item._id;
 
   return (
-    <Card sx={{ minWidth: 275, display: "inline-block"}}>
+    <Card sx={{ minWidth: 275, display: "inline-block" }}>
       <CardContent>
         <Typography variant="h5" component="div">
           {item.title}
@@ -27,15 +27,27 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
       </CardContent>
       <CardActions>
         <ButtonGroup>
-      <Button size="small" color="primary" variant="outlined">
-          View
-        </Button>
-        <Button size="small" color="success" variant="outlined" to={`/update/${id}`} component={Link}>
-          Update
-        </Button>
-        <Button size="small" color="error" variant="outlined" to={`/delete/${id}`} component={Link}>
-          Delete
-        </Button>
+          <Button size="small" color="primary" variant="outlined" to={`/view/${id}`} component={Link}>
+            View
+          </Button>
+          <Button
+            size="small"
+            color="success"
+            variant="outlined"
+            to={`/update/${id}`}
+            component={Link}
+          >
+            Update
+          </Button>
+          <Button
+            size="small"
+            color="error"
+            variant="outlined"
+            to={`/delete/${id}`}
+            component={Link}
+          >
+            Delete
+          </Button>
         </ButtonGroup>
       </CardActions>
     </Card>
