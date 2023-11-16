@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import {Routes, Route} from 'react-router-dom';
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import DeletePage from "./pages/DeletePage";
 
 
 const App: React.FC = ()  => {
@@ -17,6 +18,7 @@ const App: React.FC = ()  => {
     <CssBaseline />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/delete" element={<DeletePage />} />
     </Routes>
     </ThemeProvider>
   );

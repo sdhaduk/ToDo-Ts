@@ -37,7 +37,7 @@ const Home: React.FC = () => {
         console.log(error.message);
         setLoading(false);
       });
-  }
+  };
 
   return (
     <Grid container sx={{ justifyContent: "center" }} spacing={2}>
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       {loading ? <Loading /> : <ItemCards items={items} />}
 
       <Grid item sx={{ mt: 5 }}>
-        <CreateTaskForm getData={getData}/>
+        <CreateTaskForm getData={getData} />
       </Grid>
     </Grid>
   );
