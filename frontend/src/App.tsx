@@ -18,7 +18,7 @@ const App: React.FC = ()  => {
     <CssBaseline />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/delete" element={<DeletePage />} />
+      <Route path="/delete/:id" element ={<DeletePage />} />
     </Routes>
     </ThemeProvider>
   );

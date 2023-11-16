@@ -5,12 +5,15 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { ItemType } from "../types/types";
+import { Link } from "react-router-dom";
 
 interface Props {
   item: ItemType;
 }
 
 const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
+  const id = item._id
+
   return (
     <Card sx={{ minWidth: 275, display: "inline-block"}}>
       <CardContent>
@@ -28,7 +31,7 @@ const SingleItemCard: React.FC<Props> = ({ item }: Props) => {
         <Button size="small" color="success" variant="outlined">
           Update
         </Button>
-        <Button size="small" color="error" variant="outlined">
+        <Button size="small" color="error" variant="outlined" to={`/delete/${id}`} component={Link}>
           Delete
         </Button>
       </CardActions>
